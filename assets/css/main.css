@@ -1,0 +1,175 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #202c33;
+}
+
+/*faz o formato do celular*/
+.container .celular {
+  width: 25%;
+  height: 100%;
+  background-color: black;
+  overflow: hidden;
+  border-radius: 35px;
+  padding: 18px 17px 10px 17px;
+}
+
+/*cria uma tela de fundo no "celular"*/
+.container .celular .tela {
+  width: 18.5;
+  height: 99%;
+  background-color: #202c33;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 0px 0px 10px 0px;
+}
+
+/*formato da camera do celular*/
+.container .celular .tela .cam {
+  height: 2.5%;
+  width: 70%;
+  margin: auto;
+  border-radius: 0px 0px 15px 15px;
+  margin-bottom: 5px;
+  background-color: black;
+}
+/*boliinha da camera do celular*/
+.container .celular .tela .cam .bolinha {
+  width: 10px;
+  height: 10px;
+  background-color: gray;
+  border-radius: 50%;
+  margin-left: 140px;
+}
+
+/*div que guarda os inputs*/
+.container .celular .tela .inputs {
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+/*classe que todos os inputs recebem*/
+.container .celular .tela .inputs .input_nome {
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: rgb(53, 54, 58);
+  color: #d6eaed;
+  padding: 0px 0px 0px 5px;
+  outline: none;
+}
+
+/*muda a cor do placeholder dos inputs*/
+.container .celular .tela .inputs .input_nome::placeholder {
+  color: white;
+}
+
+/*muda a cor de foco dos inputs*/
+.container .celular .tela .inputs .input_nome:focus {
+  background-color: black;
+}
+
+/*div que exibe as mensagens*/
+.container .celular .tela .historico {
+  height: 75%;
+  width: 100%;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  background-image: url("../img/whatsapp-noturno-hero.jpg");
+  background-size: cover;
+  color: #d6eaed;
+  overflow: auto;
+}
+
+/*h3 que exibe o nome do destinatario*/
+.container .celular .tela .historico h3 {
+  color: lightgreen;
+  position: fixed;
+  background-color: #2a3942b4;
+  width: 22.8%;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/*edita a lista não ordenada*/
+.container .celular .tela .historico ul {
+  font-size: 15px;
+  list-style: none;
+  margin-top: 45px;
+}
+
+/*edita a barra de scroll na div historico(que exibe as mensagens)*/
+.container .celular .tela .historico::-webkit-scrollbar {
+  width: 8px;
+}
+
+/*edita a cor da barra de scroll na div historico(que exibe as mensagens)*/
+.container .celular .tela .historico::-webkit-scrollbar-thumb {
+  background-color: #374045a3;
+}
+
+/*edita a text-area*/
+.container .celular .tela .chatbox #mensagem {
+  margin-left: 20px;
+  resize: none;
+  border-radius: 5px;
+  padding: 5px 2px 5px 8px;
+  background-color: #2a3942;
+  color: #d6eaed;
+  border: none;
+  outline: none;
+}
+
+/*edita o botao enviar*/
+.container .celular .tela .chatbox .btn_enviar {
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  margin: auto;
+  cursor: pointer;
+}
+
+/*margem no final da lista*/
+.container .celular .tela .historico ul > li {
+  margin: 0px 0px 8px 0px;
+}
+
+/*edita a lista e coloca as mensagens da origem do lado direito da tela*/
+.texto_direita {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  list-style: none;
+}
+
+/*edita as mensagens do lado esquerdo da tela*/
+.cor_esquerda {
+  background-color: #202c33;
+  border-radius: 5px;
+  padding: 4px 6px 4px 8px;
+  margin: 0px 160px 0px 15px;
+}
+
+/*edita as mensagens do lado direito da tela*/
+.cor_direita {
+  background-color: #005c4b;
+  border-radius: 5px;
+  padding: 4px 6px 4px 8px;
+  margin: 0px 10px 0px 150px;
+  word-wrap: break-word;
+}
+
+/*div que representa um botao no final do celular*/
+.container .celular .tela .btn_final {
+  height: 5px;
+  width: 50%;
+  margin: auto;
+  margin-top: 23px;
+  border-radius: 2px;
+  background-color: white;
+}

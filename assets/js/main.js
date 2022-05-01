@@ -3,11 +3,16 @@ var origem = document.getElementById("user");
 var destino = document.getElementById("guest");
 var mensagem = document.getElementById("mensagem");
 var chate = document.getElementById("chate");
+var btn_enviar = document.getElementById("btn_enviar");
+var nome_destino = document.getElementById("nome_destino");
+
+var mensagemJson = {};
 
 var response = undefined;
 var interval = undefined;
 
 function pesquisar() {
+  nome_destino.innerText = destino.value;
   var xhr = new XMLHttpRequest();
   xhr.open(
     "GET",
@@ -16,49 +21,37 @@ function pesquisar() {
   xhr.send(null);
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
-      console.log("aquifoi");
       if (xhr.status === 200) {
-        chate.innerHTML = ""
+        chate.innerHTML = "";
         response = JSON.parse(xhr.responseText);
         console.log(response);
-        console.log("ta inhdo aqui");
-        for(let x = 0; x < response.length; x++){
-            var li = document.createElement('li');
-            var dt = document.createElement('dt');
-            var dtText = document.createTextNode(
-                `${response[x].origem}`
-                )
-                dt.appendChild(dtText);
-                li.appendChild(dt);
-                
-                var dd = document.createElement('dd');
-                var ddText = document.createTextNode(
-                    `${response[x].mensagem}`
-                    )
-                    dd.appendChild(ddText);
-                    li.appendChild(dd);
-                    
-                    if(response[x].origem === origem.value){
-                        li.classList.add('texto_direita')    
-                    }
-                    chate.appendChild(li);
-                }
-            }
+        for (let x = 0; x < response.length; x++) {
+          var li = document.createElement("li");
+          var dd = document.createElement("dd");
+          var ddText = document.createTextNode(`${response[x].mensagem}`);
+          dd.appendChild(ddText);
+          li.appendChild(dd);
+          if (response[x].origem === origem.value) {
+            li.classList.add("texto_direita");
+            dd.classList.add("cor_direita");
+          } else {
+            dd.classList.add("cor_esquerda");
+          }
+          chate.appendChild(li);
+        }
+      }
     }
   };
 }
-var mensagemJson = {};
 
 function chat() {
-    clearInterval(interval)
-  console.log("qualquer coisa");
+  clearInterval(interval);
   mensagemJson = {
     destino: destino.value,
     origem: origem.value,
     mensagem: mensagem.value,
   };
   var xhr = new XMLHttpRequest();
-  // https://barth.com.br/ApiChatCliqx/chat/verificarMensagem.php?origem=${imputOrigem.value}&destino=${imputDestino.value};
   xhr.open(
     "POST",
     "https://barth.com.br/ApiChatCliqx/chat/inserirMensagem.php"
@@ -71,10 +64,18 @@ function chat() {
       console.log(xhr.status);
       if (xhr.status == 201) {
         interval = setInterval(function () {
-          console.log("pesquisando envou");
           pesquisar();
-        }, 1000);
+        }, 5000);
       }
     }
   };
+  mensagem.value = "";
 }
+
+mensagem.addEventListener("keypress", function (evento) {
+  if (evento.key === "Enter") {
+    evento.preventDefault();
+    btn_enviar.click();
+    mensagem.value = "";
+  }
+});

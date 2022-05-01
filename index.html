@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/img/whatsapp.png">
     <link rel="stylesheet" href="style.css">
-    <title>Chat</title>
+    <title>ZapZap</title>
   </head>
   <body>
+    <!--div principal-->
     <div class="container">
+      <!--div que guarda todos os itens-->
       <div class="celular">
         <div class="tela">
           <div class="cam">
@@ -15,23 +18,23 @@
             </div>
           </div>
           <div class="inputs">
-            <input type="text" id="user" placeholder="user" class="input_nome" />
-            <input type="text" id="guest" placeholder="guest" class="input_nome" />
+            <input type="text" id="user" placeholder="seu nome" class="input_nome" value="gabs" />
+            <input type="text" id="guest" placeholder="nome da outra pessoa" class="input_nome" />
           </div>
           <div class="historico">
-            <h3>whatzap 2</h3>
+            <h3 id="nome_destino">whatzap 2</h3>
             <nav>
-              <ul id="chate" style="font-size: 18px;"></ul>
+              <ul id="chate"></ul>
             </nav>
           </div>
           <div class="chatbox">
-            <textarea name="" id="mensagem" cols="34" rows="2" style="resize: none; border-radius: 5px;"></textarea>
-            <button class="btn_enviar" onclick="chat()">Enviar</button>
+            <textarea name="" id="mensagem" cols="33" rows="1" placeholder="Mensagem"></textarea>
+            <button class="btn_enviar" id="btn_enviar" onclick="chat()"><img src="./assets/img/graysendbutton-copy-300x300.png" alt="" style="max-width: 30px; max-height: 30px;"></button>
           </div>
           <div class="btn_final"></div>
         </div>
       </div>
     </div>
-    <script src="./main.js"></script>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
