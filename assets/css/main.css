@@ -151,7 +151,7 @@
 .cor_esquerda {
   background-color: #202c33;
   border-radius: 5px;
-  padding: 4px 6px 4px 8px;
+  padding: 4px 6px 4px 10px;
   margin: 0px 160px 0px 15px;
 }
 
@@ -159,7 +159,7 @@
 .cor_direita {
   background-color: #005c4b;
   border-radius: 5px;
-  padding: 4px 6px 4px 8px;
+  padding: 4px 6px 4px 10px;
   margin: 0px 10px 0px 150px;
   word-wrap: break-word;
 }
