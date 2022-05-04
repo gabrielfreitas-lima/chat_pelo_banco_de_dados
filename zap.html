@@ -21,28 +21,39 @@
           </div>
           <!--fim camera de enfeite-->
           <!--inputs dos nomes-->
+          <div class="inputs" style="margin-left: 10px;">
+              <h1>Bem vindo</h1>
+              <h2 id="user" style="text-transform: capitalize;color:lightskyblue"></h2>
+          </div>
+          <select name="" id="select" class="select">
+            <option value="">contatos</option>
+          </select>
           <!--fim inputs dos nomes-->
           <!--historico-->
-          <div class="historico" style="height: 92%;">
+          <div class="historico" style="height: 71.5%;">
             <!--nome do destino-->
             <h3 id="nome_destino">whatzap 2</h3>
-            <div class="inputs" style="margin-top: 15%;">
-              <input type="text" id="email" placeholder="Email" class="input_nome" value="gabriel.lima@cliqx.com.br" />
-              <input type="password" id="senha" placeholder="Senha" class="input_nome"/>
-              <button id="btn_login" onclick="confirmar()" class="btn_login">Login</button>
-            </div>
             <!--fim do destino-->
+            <nav>
+              <!--lista-->
+              <ul id="chate"></ul>
+              <!--lista-->
+            </nav>
           </div>
           <!--fim historico-->
            <!--chatbox-->
+          <div class="chatbox">
+            <textarea name="" id="mensagem" cols="33" rows="1" placeholder="Mensagem"></textarea>
+            <button class="btn_enviar" id="btn_enviar" onclick="chat()"><img src="./assets/img/graysendbutton-copy-300x300.png" alt="" style="max-width: 30px; max-height: 30px;"></button>
+          </div>
            <!--fim chatbox-->
-          <div class="btn_final"></div>
+          <a href="index.html"><div class="btn_final"></div></a>
         </div>
         <!--muda o fundo dentro do celular-->
       </div>
       <!--div que guarda todos os itens-->
     </div>
     <!--div principal-->
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/mensagem.js"></script>
   </body>
 </html>

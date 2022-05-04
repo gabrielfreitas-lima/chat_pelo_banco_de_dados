@@ -38,16 +38,16 @@
 }
 /*boliinha da camera do celular*/
 .container .celular .tela .cam .bolinha {
-  width: 10px;
-  height: 10px;
+  width: 50px;
+  height: 7px;
   background-color: gray;
-  border-radius: 50%;
-  margin-left: 140px;
+  border-radius: 10px;
+  margin: auto;
 }
 
 /*div que guarda os inputs*/
 .container .celular .tela .inputs {
-  height: 60px;
+  height: 75px;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
@@ -55,12 +55,13 @@
 
 /*classe que todos os inputs recebem*/
 .container .celular .tela .inputs .input_nome {
-  height: 40px;
+  height: 50px;
   border: 1px solid white;
   border-radius: 5px;
   background-color: rgb(53, 54, 58);
   color: #d6eaed;
-  padding: 0px 0px 0px 5px;
+  padding: 3px 0px 3px 5px;
+  margin: 4px 0px 4px 0px;
   outline: none;
 }
 
@@ -74,9 +75,26 @@
   background-color: black;
 }
 
+.container .celular .tela .inputs .btn_login{
+  background-color: rgb(53, 54, 58);
+  color: #d6eaed;
+  border: none;
+  width: 15%;
+  padding: 3px 5px 3px 5px;
+  border-radius: 2px;
+  margin: 0px 0px 5px 0px ;
+}
+
+.container .celular .tela .select{
+  background-color: #005c4b;
+  margin-left: 10px;
+  color: #d6eaed;
+  text-transform: capitalize;
+}
+
 /*div que exibe as mensagens*/
 .container .celular .tela .historico {
-  height: 75%;
+  height: 70%;
   width: 100%;
   margin-bottom: 5px;
   border-radius: 10px;
@@ -139,6 +157,14 @@
   margin: 0px 0px 8px 0px;
 }
 
+/*edita a lista e coloca as mensagens da origem do lado esquerdo da tela*/
+.texto_esquerda {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+}
+
 /*edita a lista e coloca as mensagens da origem do lado direito da tela*/
 .texto_direita {
   display: flex;
@@ -149,14 +175,17 @@
 
 /*edita as mensagens do lado esquerdo da tela*/
 .cor_esquerda {
+  max-width: 45%;
   background-color: #202c33;
   border-radius: 5px;
-  padding: 4px 6px 4px 10px;
-  margin: 0px 160px 0px 15px;
+  padding: 4px 10px 4px 10px;
+  margin: 0px 150px 0px 10px;
+  overflow: hidden;
 }
 
 /*edita as mensagens do lado direito da tela*/
 .cor_direita {
+  max-width: 55%;
   background-color: #005c4b;
   border-radius: 5px;
   padding: 4px 6px 4px 10px;
@@ -169,7 +198,7 @@
   height: 5px;
   width: 50%;
   margin: auto;
-  margin-top: 23px;
+  margin-top: 20px;
   border-radius: 2px;
   background-color: white;
 }
