@@ -3,6 +3,9 @@ var email = document.getElementById("email");
 var senha = document.getElementById("senha");
 var btn_login = document.getElementById("btn_login");
 
+/* deixa em foco o input de email */
+email.focus();
+
 /* coleta os dados da api de login*/
 var respostaLogin = undefined;
 

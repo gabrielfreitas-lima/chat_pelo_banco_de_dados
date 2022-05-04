@@ -19,7 +19,11 @@ var interval = undefined;
 /* coleta os nomes registrados na api de nomes */
 var resNomes = undefined;
 
+/* mostra o nome do usuario logado */
 user.innerText = `- ${origem}`;
+
+/* deixa em foco a caixa de contatos */
+select.focus();
 
 /* função pesquisar, tem uma requisição http na api, que pega 2 valores
 (origem e destino), não é enviado nada. Depois das confirmações, é feito um laço de repetição
