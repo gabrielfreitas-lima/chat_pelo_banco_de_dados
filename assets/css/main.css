@@ -96,7 +96,7 @@
 .container .celular .tela .historico {
   height: 70%;
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   border-radius: 10px;
   background-image: url("../img/whatsapp-noturno-hero.jpg");
   background-size: cover;
